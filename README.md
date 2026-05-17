@@ -22,18 +22,6 @@ O projeto foi construído com foco em design limpo, navegação simples e visual
 
 ---
 
-## Estrutura do Projeto
-
-```bash
-📦 portfolio
- ┣ 📜 index.html
- ┣ 📜 style.css
- ┣ 📜 script.js
- ┣ 📷 foto.png
-````
-
----
-
 ## Funcionalidades
 
 * Navegação suave entre seções
