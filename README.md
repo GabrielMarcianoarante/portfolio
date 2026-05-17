@@ -8,7 +8,7 @@ O projeto foi construído com foco em design limpo, navegação simples e visual
 
 ## Preview
 
-<img src="./preview.png" alt="Preview do projeto" width="100%" />
+<img src="./Preview.png" alt="Preview do projeto" width="100%" />
 
 ---
 
