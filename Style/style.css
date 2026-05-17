@@ -1,12 +1,19 @@
 /* Cores e tema - muda aqui que muda em todo lugar */
 :root {
-  --bg:       #0d0d0d;   /* Fundo preto bem escuro da página */
-  --bg2:      #111111;   /* Um preto um pouco menos escuro para seções alternadas */
-  --card:     #161616;   /* Fundo dos cards e containers */
-  --borda:    #222222;   /* Cor das bordas dos elementos */
-  --texto:    #e8e8e8;   /* Texto branco/cinza claro principal */
-  --texto2:   #888888;   /* Texto cinza mais fraco para texto secundário */
-  --verde:    #c8f55a;   /* Verde limão - cor de destaque que chama atenção */
+  --bg: #0d0d0d;
+  /* Fundo preto bem escuro da página */
+  --bg2: #111111;
+  /* Um preto um pouco menos escuro para seções alternadas */
+  --card: #161616;
+  /* Fundo dos cards e containers */
+  --borda: #222222;
+  /* Cor das bordas dos elementos */
+  --texto: #e8e8e8;
+  /* Texto branco/cinza claro principal */
+  --texto2: #888888;
+  /* Texto cinza mais fraco para texto secundário */
+  --verde: #c8f55a;
+  /* Verde limão - cor de destaque que chama atenção */
 }
 
 /* Tira as margens padrão do navegador */
@@ -102,6 +109,7 @@ body {
     opacity: 0;
     transform: translateX(-50px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -113,6 +121,7 @@ body {
     opacity: 0;
     transform: translateX(50px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -124,10 +133,27 @@ body {
     opacity: 0;
     transform: scale(0.8);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
   }
+}
+
+/* Classes de animação para elementos que aparecem conforme rola */
+#sobre.visivel,
+#skills.visivel,
+#projetos.visivel,
+#documentos.visivel,
+#contato.visivel {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.card-projeto.visivel,
+.skill-grupo.visivel,
+.info-item.visivel,
+.doc-card.visivel {
+  animation: zoomIn 0.6s ease-out;
 }
 
 /* Seção hero - primeira coisa que vê */
@@ -232,8 +258,10 @@ body {
 .hero-foto {
   width: 260px;
   height: 260px;
-  object-fit: cover;    /* corta a imagem pra caber no círculo */
-  border-radius: 50%;   /* fica redonda */
+  object-fit: cover;
+  /* corta a imagem pra caber no círculo */
+  border-radius: 50%;
+  /* fica redonda */
   border: 3px solid var(--verde);
   background-color: var(--card);
   display: block;
@@ -345,7 +373,8 @@ body {
   gap: 8px;
 }
 
-/* Badge individual de skill */.skill-tag {
+/* Badge individual de skill */
+.skill-tag {
   font-size: 13px;
   color: var(--texto);
   background-color: var(--bg2);
@@ -456,6 +485,103 @@ body {
   border: 1px solid rgba(200, 245, 90, 0.3);
   padding: 3px 10px;
   border-radius: 4px;
+}
+
+/* Seção documentos - downloads de PDF */
+#documentos {
+  padding: 100px 0;
+  background-color: var(--bg2);
+}
+
+/* Subtítulo da seção de documentos */
+.docs-subtitulo {
+  color: var(--texto2);
+  margin-bottom: 48px;
+  font-size: 15px;
+}
+
+/* Grid 2 colunas para documentos */
+.docs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+/* Card de documento */
+.doc-card {
+  padding: 32px;
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+  background-color: var(--card);
+  text-decoration: none;
+  color: var(--texto);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+/* Hover do card de documento */
+.doc-card:hover {
+  border-color: var(--verde);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(200, 245, 90, 0.1);
+}
+
+/* Ícone do documento */
+.doc-icon {
+  font-size: 48px;
+  display: flex;
+  align-items: center;
+}
+
+/* Título do documento */
+.doc-titulo {
+  font-family: 'Space Mono', monospace;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--texto);
+}
+
+/* Descrição do documento */
+.doc-desc {
+  color: var(--texto2);
+  font-size: 14px;
+  line-height: 1.6;
+  flex: 1;
+}
+
+/* Footer do card com info de download */
+.doc-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--borda);
+}
+
+/* Label de download */
+.doc-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  color: var(--verde);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* Seta indicando ação */
+.doc-arrow {
+  font-size: 18px;
+  color: var(--verde);
+  transition: transform 0.2s;
+}
+
+/* Seta anima quando hover */
+.doc-card:hover .doc-arrow {
+  transform: translateX(4px);
 }
 
 /* Seção contato - formas de entrar em contato */
@@ -583,7 +709,8 @@ footer {
   /* Todos os grids viram 1 coluna pra coisa ficar legível */
   .sobre-grid,
   .skills-grid,
-  .projetos-grid {
+  .projetos-grid,
+  .docs-grid {
     grid-template-columns: 1fr;
   }
 }
