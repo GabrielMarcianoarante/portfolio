@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // Passou de 50px? Coloca a classe 'scrolled' pra compactar
       navbar.classList.add('scrolled');
     } else {
-      // Não passou? Remove a classe
+      // Não passou? Remove a classe do navbar
       navbar.classList.remove('scrolled');
     }
   });
