@@ -58,4 +58,4 @@ Caso queira clonar e explorar o código do projeto:
 
 1. Clone o repositório:
 ```bash
-   git clone [https://github.com/GabrielMarcianoarante/portfolio.git](https://github.com/GabrielMarcianoarante/portfolio.git)
+   git clone [https://github.com/GabrielMarcianoarante/portfolio.git]
