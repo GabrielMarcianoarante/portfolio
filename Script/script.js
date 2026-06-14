@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
     linksNav.forEach(function (link) {
       link.classList.remove('ativo');
 
-      // E coloca só no link da seção que tá vendo
+      // E coloca só no link da seção que tá vendo agora
       if (link.getAttribute('href') === '#' + secaoAtual) {
         link.classList.add('ativo');
       }
